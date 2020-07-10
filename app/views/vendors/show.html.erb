@@ -1,0 +1,7 @@
+<h1><%= @vendor.name %>'s Show Page</h1>
+
+<% @vendor.vendor_sweets.each do |v| %>
+ <p><%= link_to v.sweet.name, sweet_path(v.sweet.id)%></p>
+
+
+<% end %>

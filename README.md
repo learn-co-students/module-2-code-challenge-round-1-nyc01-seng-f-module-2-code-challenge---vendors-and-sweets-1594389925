@@ -59,7 +59,7 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 Update the schema and models to add the `VendorSweet` model. It should have:
 
-- a vendor
+- a vendor 
 - a sweet
 - a price (use an integer data type for this column: we'll treat the numbers in it as the price, in cents).
 
