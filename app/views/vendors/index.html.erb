@@ -1,7 +1,20 @@
 <h1>All Vendors</h1>
 
+<% total_average_price = @vendor_sweets.map {|vendor| vendor.price} %>
+<h3> Average Price of Sweets: <%= total_average_price.sum(0.0) %></h3>
+
 <ul>
-  <% @vendors.each do |vendor| %>
-    <li><%= vendor.name %></li>
+<% @vendors.each do |vendor| %>
+  
+  <% average_price_array = vendor.vendor_sweets.map {|sweet| sweet.price} %>
+  <% average_price = average_price_array.sum(0.0) %>
+  
+  <li><%= link_to vendor.name, vendor_path(vendor) %> - Average Price: <%=average_price%> </li>
+  
   <% end  %>
-</ul>
+  </ul>
+  
+  
+  
+
+  
